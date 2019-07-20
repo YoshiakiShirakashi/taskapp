@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29F4A5031807BA641A5F3C1A /* Pods_taskapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1760877A738027E06E77E01D /* Pods_taskapp.framework */; };
+		99BD1D7422E2CB410075D42F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BD1D7322E2CB410075D42F /* Task.swift */; };
 		99E2EA1A22E2A762005728B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E2EA1922E2A762005728B2 /* AppDelegate.swift */; };
 		99E2EA1C22E2A762005728B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E2EA1B22E2A762005728B2 /* ViewController.swift */; };
 		99E2EA1F22E2A762005728B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99E2EA1D22E2A762005728B2 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		1760877A738027E06E77E01D /* Pods_taskapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_taskapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3167932452BB55B42B4E50FD /* Pods-taskapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-taskapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-taskapp/Pods-taskapp.release.xcconfig"; sourceTree = "<group>"; };
+		99BD1D7322E2CB410075D42F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		99E2EA1622E2A762005728B2 /* taskapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E2EA1922E2A762005728B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99E2EA1B22E2A762005728B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		99E2EA1822E2A762005728B2 /* taskapp */ = {
 			isa = PBXGroup;
 			children = (
+				99BD1D7322E2CB410075D42F /* Task.swift */,
 				99E2EA1922E2A762005728B2 /* AppDelegate.swift */,
 				99E2EA1B22E2A762005728B2 /* ViewController.swift */,
 				99E2EA2B22E2B034005728B2 /* InputViewController.swift */,
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99BD1D7422E2CB410075D42F /* Task.swift in Sources */,
 				99E2EA2C22E2B034005728B2 /* InputViewController.swift in Sources */,
 				99E2EA1C22E2A762005728B2 /* ViewController.swift in Sources */,
 				99E2EA1A22E2A762005728B2 /* AppDelegate.swift in Sources */,
