@@ -82,8 +82,8 @@
 		99E2EA1822E2A762005728B2 /* taskapp */ = {
 			isa = PBXGroup;
 			children = (
-				99BD1D7322E2CB410075D42F /* Task.swift */,
 				99E2EA1922E2A762005728B2 /* AppDelegate.swift */,
+				99BD1D7322E2CB410075D42F /* Task.swift */,
 				99E2EA1B22E2A762005728B2 /* ViewController.swift */,
 				99E2EA2B22E2B034005728B2 /* InputViewController.swift */,
 				99E2EA1D22E2A762005728B2 /* Main.storyboard */,

@@ -10,23 +10,44 @@ import UIKit
 import RealmSwift
 import UserNotifications
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var categorySearchBar: UISearchBar!
+    
     // Realmインスタンスを取得する
     let realm = try! Realm()
-    
-    // DB内のタスクが格納されるリスト。
-    // 日付近い順\順でソート：降順
-    // 以降内容をアップデートするとリスト内は自動的に更新される。
-    var taskArray = try! Realm().objects(Task.self).sorted(byKeyPath: "date", ascending: false)
-    
+    var searchWord = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        categorySearchBar.delegate = self
+        categorySearchBar.placeholder = "カテゴリーで絞り込み"
+        categorySearchBar.showsCancelButton = true
     }
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)  {
+        searchWord = searchBar.text!
+        taskArray = realm.objects(Task.self).filter("category == %@", searchWord)
+        tableView.reloadData()
+        self.view.endEditing(true)
+    }
+    
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        self.view.endEditing(true)
+        taskArray = try!Realm().objects(Task.self).sorted(byKeyPath: "date", ascending: false)
+        tableView.reloadData()
+    }
+    
+    // DB内のタスクが格納されるリスト。
+    // 日付近い順\順でソート：降順
+    // 以降内容をアップデートするとリスト内は自動的に更新される。
+    var taskArray = try! Realm().objects(Task.self).sorted(byKeyPath: "date", ascending: false)
     // MARK: UITableViewDataSourceプロトコルのメソッド
     // データの数（＝セルの数）を返すメソッド
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
